@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crime Report Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        form {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+        label {
+            font-weight: bold;
+        }
+        input[type="text"], input[type="number"], input[type="date"], textarea, select {
+            width: calc(100% - 10px);
+            padding: 8px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        textarea {
+            height: 100px;
+            resize: vertical;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            float: right;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Crime Report Form</h1>
+    <form action="/preview" method="POST">
+        <label for="FIRNo">FIR No:</label>
+        <input type="text" id="FIRNo" name="FIRNo" required><br><br>
+
+        <label for="RI">RI:</label>
+        <input type="text" id="RI" name="RI" required><br><br>
+
+        <label for="Year">Year:</label>
+        <input type="number" id="Year" name="Year" required><br><br>
+
+        <label for="Month">Month:</label>
+        <input type="number" id="Month" name="Month" required><br><br>
+
+        <label for="Offence_From_Date">Offence From Date:</label>
+        <input type="date" id="Offence_From_Date" name="Offence_From_Date" required><br><br>
+
+        <label for="Offence_To_Date">Offence To Date:</label>
+        <input type="date" id="Offence_To_Date" name="Offence_To_Date" required><br><br>
+
+        <label for="FIR_Date">FIR Date:</label>
+        <input type="date" id="FIR_Date" name="FIR_Date" required><br><br>
+
+        <label for="ActSection">Act Section:</label>
+        <input type="text" id="ActSection" name="ActSection" required><br><br>
+
+        <label for="IOName">IO Name:</label>
+        <input type="text" id="IOName" name="IOName" required><br><br>
+
+        <label for="Place_of_Offence">Place of Offence:</label>
+        <input type="text" id="Place_of_Offence" name="Place_of_Offence" required><br><br>
+
+        <label for="Village_Area_Name">Village/Area Name:</label>
+        <input type="text" id="Village_Area_Name" name="Village_Area_Name" required><br><br>
+
+        <label for="Unit_ID">Unit ID:</label>
+        <input type="number" id="Unit_ID" name="Unit_ID" required><br><br>
+
+        <label for="FIR_Summary">FIR Summary:</label><br>
+        <textarea id="FIR_Summary" name="FIR_Summary" required></textarea><br><br>
+
+        <label for="Crime_Name">Crime Name:</label>
+        <input type="text" id="Crime_Name" name="Crime_Name" required><br><br>
+
+        <label for="Victim_Person_ID">Victim Person ID:</label>
+        <input type="number" id="Victim_Person_ID" name="Victim_Person_ID" required><br><br>
+
+        <label for="Victim_PresentAddress">Victim Present Address:</label>
+        <input type="text" id="Victim_PresentAddress" name="Victim_PresentAddress" required><br><br>
+
+        <label for="Victim_PresentCity">Victim Present City:</label>
+        <input type="text" id="Victim_PresentCity" name="Victim_PresentCity" required><br><br>
+
+        <label for="Victim_InjuryType">Victim Injury Type:</label>
+        <input type="text" id="Victim_InjuryType" name="Victim_InjuryType" required><br><br>
+
+        <label for="Victim_Injury_Nature">Victim Injury Nature:</label>
+        <input type="text" id="Victim_Injury_Nature" name="Victim_Injury_Nature" required><br><br>
+
+        <label for="Victim_Aadhaar_number">Victim Aadhaar Number:</label>
+        <input type="text" id="Victim_Aadhaar_number" name="Victim_Aadhaar_number" required><br><br>
+
+        <label for="Victim_Name">Victim Name:</label>
+        <input type="text" id="Victim_Name" name="Victim_Name" required><br><br>
+
+        <label for="Victim_DOB">Victim Date of Birth:</label>
+        <input type="date" id="Victim_DOB" name="Victim_DOB" required><br><br>
+
+        <label for="Victim_Caste">Victim Caste:</label>
+        <input type="text" id="Victim_Caste" name="Victim_Caste" required><br><br>
+
+        <label for="Victim_Profession">Victim Profession:</label>
+        <input type="text" id="Victim_Profession" name="Victim_Profession" required><br><br>
+
+        <label for="Victim_Sex">Victim Sex:</label>
+        <select id="Victim_Sex" name="Victim_Sex" required>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+        </select><br><br>
+
+        <label for="Victim_PresentState">Victim Present State:</label>
+        <input type="text" id="Victim_PresentState" name="Victim_PresentState" required><br><br>
+
+        <label for="Victim_PermanentAddress">Victim Permanent Address:</label>
+        <input type="text" id="Victim_PermanentAddress" name="Victim_PermanentAddress" required><br><br>
+
+        <label for="Victim_PermanentCity">Victim Permanent City:</label>
+        <input type="text" id="Victim_PermanentCity" name="Victim_PermanentCity" required><br><br>
+
+        <label for="Victim_PermanentState">Victim Permanent State:</label>
+        <input type="text" id="Victim_PermanentState" name="Victim_PermanentState" required><br><br>
+
+        <label for="Accused_Person_ID">Accused Person ID:</label>
+        <input type="number" id="Accused_Person_ID" name="Accused_Person_ID" required><br><br>
+
+        <label for="Accused_PresentAddress">Accused Present Address:</label>
+        <input type="text" id="Accused_PresentAddress" name="Accused_PresentAddress" required><br><br>
+
+        <label for="Accused_PresentCity">Accused Present City:</label>
+        <input type="text" id="Accused_PresentCity" name="Accused_PresentCity" required><br><br>
+
+        <label for="Accused_Aadhaar_number">Accused Aadhaar Number:</label>
+        <input type="text" id="Accused_Aadhaar_number" name="Accused_Aadhaar_number" required><br><br>
+
+        <label for="Accused_Name">Accused Name:</label>
+        <input type="text" id="Accused_Name" name="Accused_Name" required><br><br>
+
+        <label for="Accused_DOB">Accused Date of Birth:</label>
+        <input type="date" id="Accused_DOB" name="Accused_DOB" required><br><br>
+
+        <label for="Accused_Caste">Accused Caste:</label>
+        <input type="text" id="Accused_Caste" name="Accused_Caste" required><br><br>
+
+        <label for="Accused_Profession">Accused Profession:</label>
+        <input type="text" id="Accused_Profession" name="Accused_Profession" required><br><br>
+
+        <label for="Accused_Sex">Accused Sex:</label>
+        <select id="Accused_Sex" name="Accused_Sex" required>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+        </select><br><br>
+
+        <label for="Accused_PresentState">Accused Present State:</label>
+        <input type="text" id="Accused_PresentState" name="Accused_PresentState" required><br><br>
+
+        <label for="Accused_PermanentAddress">Accused Permanent Address:</label>
+        <input type="text" id="Accused_PermanentAddress" name="Accused_PermanentAddress" required><br><br>
+
+        <label for="Accused_PermanentCity">Accused Permanent City:</label>
+        <input type="text" id="Accused_PermanentCity" name="Accused_PermanentCity" required><br><br>
+
+        <label for="Accused_PermanentState">Accused Permanent State:</label>
+        <input type="text" id="Accused_PermanentState" name="Accused_PermanentState" required><br><br>
+
+        <label for="Arrest_Person_ID">Arrest Person ID:</label>
+        <input type="number" id="Arrest_Person_ID" name="Arrest_Person_ID" required><br><br>
+
+        <label for="Arrest_PresentAddress">Arrest Present Address:</label>
+        <input type="text" id="Arrest_PresentAddress" name="Arrest_PresentAddress" required><br><br>
+
+        <label for="Arrest_PresentCity">Arrest Present City:</label>
+        <input type="text" id="Arrest_PresentCity" name="Arrest_PresentCity" required><br><br>
+
+        <label for="Arrest_Aadhaar_number">Arrest Aadhaar Number:</label>
+        <input type="text" id="Arrest_Aadhaar_number" name="Arrest_Aadhaar_number" required><br><br>
+
+        <label for="Arrest_Name">Arrest Name:</label>
+        <input type="text" id="Arrest_Name" name="Arrest_Name" required><br><br>
+
+        <label for="Arrest_DOB">Arrest Date of Birth:</label>
+        <input type="date" id="Arrest_DOB" name="Arrest_DOB" required><br><br>
+
+        <label for="Arrest_Caste">Arrest Caste:</label>
+        <input type="text" id="Arrest_Caste" name="Arrest_Caste" required><br><br>
+
+        <label for="Arrest_Profession">Arrest Profession:</label>
+        <input type="text" id="Arrest_Profession" name="Arrest_Profession" required><br><br>
+
+        <label for="Arrest_Sex">Arrest Sex:</label>
+        <select id="Arrest_Sex" name="Arrest_Sex" required>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+        </select><br><br>
+
+        <label for="Arrest_PresentState">Arrest Present State:</label>
+        <input type="text" id="Arrest_PresentState" name="Arrest_PresentState" required><br><br>
+
+        <label for="Arrest_PermanentAddress">Arrest Permanent Address:</label>
+        <input type="text" id="Arrest_PermanentAddress" name="Arrest_PermanentAddress" required><br><br>
+
+        <label for="Arrest_PermanentCity">Arrest Permanent City:</label>
+        <input type="text" id="Arrest_PermanentCity" name="Arrest_PermanentCity" required><br><br>
+
+        <label for="Arrest_PermanentState">Arrest Permanent State:</label>
+        <input type="text" id="Arrest_PermanentState" name="Arrest_PermanentState" required><br><br>
+
+        <button type="submit">Preview</button>
+    </form>
+</body>
+</html>
